@@ -1,0 +1,26 @@
+sudo: required
+services:
+  - docker 
+
+
+before_install:
+  - gem install bundler
+  - docker build -t nams1005/docker-react -f Dockerfile.dev .
+
+script:
+  # - docker run nams1005/docker-react npm run test -- --coverage 
+  - docker run -e CI=true nams1005/docker-react npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "test1"
+  env: "Test1-env"
+  bucket_name: "docker-test"
+  bucket_path: "test"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
+

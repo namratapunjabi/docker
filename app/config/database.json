@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "database_development",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "test_admin",
+    "password": "Skill123",
+    "database": "testaqua",
+    "host": "test-db-instance.cfqlvsdr04vd.ap-south-1.rds.amazonaws.com",
+    "port": 1433,
+    "dialect": "mssql",
+    "logging": false
+  },
+  "production": {
+    "username": "achin",
+    "password": "Experdel@1",
+    "database": "aquaepp",
+    "host": "127.0.0.1",
+    "port": 8000,
+    "dialect": "mssql",
+    "logging": false
+  }
+}
