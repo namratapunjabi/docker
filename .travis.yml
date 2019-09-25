@@ -17,7 +17,7 @@ deploy:
   app: "test1"
   env: "Test1-env"
   bucket_name: "docker-test"
-  bucket_path: "test"
+  bucket_path: "test1"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
