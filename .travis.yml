@@ -9,7 +9,7 @@ before_install:
 
 script:
   # - docker run nams1005/docker-react npm run test -- --coverage 
-  - docker run -e CI=true nams1005/docker npm run
+  - docker run -e CI=true nams1005/docker npm run start
 
 deploy:
   provider: elasticbeanstalk
